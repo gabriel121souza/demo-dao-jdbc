@@ -3,9 +3,10 @@ package model.entities;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Seller implements Serializable{
-	
+public class Seller implements Serializable {
+
 	private static final long serialVersionUID = 1L;
+
 	private Integer id;
 	private String name;
 	private String email;
@@ -15,7 +16,6 @@ public class Seller implements Serializable{
 	private Department department;
 	
 	public Seller() {
-		
 	}
 
 	public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Department department) {
@@ -42,6 +42,7 @@ public class Seller implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -62,8 +63,8 @@ public class Seller implements Serializable{
 		return baseSalary;
 	}
 
-	public void setBaseSalary(Double baseSakary) {
-		this.baseSalary = baseSakary;
+	public void setBaseSalary(Double baseSalary) {
+		this.baseSalary = baseSalary;
 	}
 
 	public Department getDepartment() {
@@ -101,9 +102,7 @@ public class Seller implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Seller [id=" + id + ", name=" + name + ", email ="+ email + ", birthDate=" + birthDate + ", baseSakary=" + baseSalary
-				+ ", department=" + department + "]";
+		return "Seller [id=" + id + ", name=" + name + ", email=" + email + ", birthDate=" + birthDate + ", baseSalary="
+				+ baseSalary + ", department=" + department + "]";
 	}
-
-	
 }

@@ -1,19 +1,20 @@
 package application;
 
-import java.util.Date;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
-import model.entities.Department;
 import model.entities.Seller;
 
 public class Program {
 	public static void main(String[] args) {
 		
-		Department obj = new Department(2, "Books");
-		Seller seller = new Seller(22, "gariel","gabriel@gmail.com", new Date(), (double) 3500, obj);
+		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
-		Seller sellerDao = DaoFactory.createSellerDao();
+		System.out.println("TESTe 1: seller findbyid====");
+		
+		Seller seller = sellerDao.findById(3);
+				
 		System.out.println(seller);
+		
 	}
 }
